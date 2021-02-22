@@ -27,11 +27,11 @@ function App() {
   const [currentTheme,setCurrentTheme]= useState("light");
 
   const toggleCurrentTheme = () => {
-    if (currentTheme==="light") return setCurrentTheme("dark");
-    else return setCurrentTheme("light");
+    if (currentTheme===theme.light) return setCurrentTheme(theme.dark);
+    else return setCurrentTheme(theme.light);
   }
   return (
-    <ThemeProvider theme={theme.currentTheme}>
+    <ThemeProvider theme={currentTheme}>
       <GlobalStyle />
       <ThemeButton onClick={toggleCurrentTheme} >
         Dark Theme
